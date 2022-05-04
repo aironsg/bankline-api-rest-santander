@@ -1,36 +1,16 @@
-package com.dev.airon.bankline_api.model;
+package com.dev.airon.bankline_api.dto;
 
-import java.io.Serializable;
 import java.time.LocalDateTime;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import com.dev.airon.bankline_api.model.MovimentacaoTipo;
 
-@Entity
-@Table(name = "tab_movimentacao")
-public class Movimentacao implements Serializable{
-
-
-	private static final long serialVersionUID = 1L;
+public class MovimentacaoDto {
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
-	@Column(name = "data_hora")
+	
 	private LocalDateTime dataHora;
 	private String descricao;
 	private Double valor;
-	
-	@Enumerated(EnumType.STRING)
 	private MovimentacaoTipo tipo;
-	
-	@Column(name = "id_conta")
 	private Integer idConta;
 	
 	public Integer getIdConta() {
@@ -65,8 +45,6 @@ public class Movimentacao implements Serializable{
 	public void setTipo(MovimentacaoTipo tipo) {
 		this.tipo = tipo;
 	}
-	
-	
 	
 	
 
