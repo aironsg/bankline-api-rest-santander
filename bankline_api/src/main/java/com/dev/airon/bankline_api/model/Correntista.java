@@ -28,6 +28,10 @@ public class Correntista implements Serializable{
 	
 	
 
+	public Integer getId() {
+		return id;
+	}
+	
 	public String getCpf() {
 		return cpf;
 	}

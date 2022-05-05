@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 
 import com.dev.airon.bankline_api.model.MovimentacaoTipo;
 
+
 public class MovimentacaoDto {
 	
 	
